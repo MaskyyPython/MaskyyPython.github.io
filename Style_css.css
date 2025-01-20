@@ -1,0 +1,344 @@
+/* Réinitialisation de la marge et du padding pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général pour le corps du document */
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Style pour l'en-tête */
+header {
+    background-color: #153860;
+    /* Bleu */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s ease;
+    /* Transition fluide pour le déplacement */
+}
+
+/* Style pour le logo */
+header .logo {
+    width: 100px;
+    /* Taille du logo à ajuster selon vos besoins */
+    height: auto;
+    margin-right: 20px;
+}
+
+.hide {
+    top: -100%;
+    /* Ajuster cette valeur en fonction de la hauteur de votre en-tête */
+}
+
+/* Style pour la barre de navigation */
+nav {
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    text-align: center;
+    border: 2px solid black;
+}
+
+/* Style pour les éléments de la liste de navigation */
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Style pour les liens de navigation */
+nav ul li a {
+    color: #006ff4;
+    text-decoration: none;
+}
+
+/* Style pour les liens de navigation lors du survol */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour la classe container */
+.container {
+    max-width: 63vw;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container p {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 20px;
+
+}
+.container h3 {
+    font-size: 35px;
+    line-height: 35px;
+	color: #153860;
+	
+    
+
+}
+
+/* Style pour les articles */
+article {
+    margin-bottom: 20px;
+    /* Marge dessous de texte */
+}
+
+article h2 {
+    color: #333;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+/* Style pour le pied de page */
+footer {
+    background-color: #153860;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+/* Style pour le menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #006ff4;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #dedede
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+/* Style pour les photos avec animation fluide */
+.photo {
+    transition: transform 0.3s ease;
+    max-width: 325px;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Style pour le conteneur d'image */
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.image-container img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    
+}
+
+.image-container h1 {
+    display: block;
+    font-size: 25px;
+    margin-left: 10px;
+    float: right;
+    line-height: 1.6;
+    text-decoration: none;
+    margin-right: 1vw;
+}
+
+.image-container:hover h1 {
+    text-decoration: underline;
+
+}
+
+/* Style pour le texte de superposition */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #fefefe;
+    /* Could be more or less, depending on screen size */
+}
+
+.modal-content img {
+    width: 75%;
+    height: auto;
+
+}
+
+.modal-content h2 {
+    line-height: 50px;
+    color: black;
+
+}
+
+.modal-content h1 {
+    line-height: 50px;
+    font-size: 50px;
+    color: black;
+
+}
+
+.modal-content h1:hover {
+    text-decoration: none;
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#banniere {
+    position: fixed;
+    right: 0;
+    top: 0;
+    
+    /* Largeur de la bannière */
+    height: 100vh;
+    width: 37vh;
+    /* Hauteur de la bannière */
+    background-color: #0c2036;
+    /* Couleur de fond de la bannière */
+    z-index: 998;
+    overflow: scroll;
+    /* Assure que la bannière est au-dessus des autres éléments */
+    scrollbar-width: none;
+}
+
+#banniere img {
+    width: 100%;
+    /* Largeur de l'image égale à la largeur de la bannière */
+    height: auto;
+    /* Hauteur de l'image ajustée automatiquement pour conserver l'aspect ratio */
+
+}
+#banniere:hover {
+    z-index: 1000;
+}
+.element {
+    visibility: hidden;
+    height: 35vh;
+}
+#ban-une {
+    resize: horizontal;
+    max-width: 37vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 37vh;
+    /* Largeur de la bannière */
+    height: 100vh;
+    /* Hauteur de la bannière */
+    background-color: #0c2036;
+    /* Couleur de fond de la bannière */
+    z-index: 998;
+    /* Assure que la bannière est au-dessus des autres éléments */
+    color: #fefefe;
+    overflow: scroll;
+    scrollbar-width: none;
+    
+}
+
+#ban-une img {
+    width: 100%;
+    /* Largeur de l'image égale à la largeur de la bannière */
+    height: auto;
+    /* Hauteur de l'image ajustée automatiquement pour conserver l'aspect ratio */
+}
+
+.select-button {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #153860;
+    color: #fefefe;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.select-button:hover {
+    text-decoration: underline;
+    background-color: #1c4b80;
+}
+
+.rat-container{
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+.rat-container img {
+    display: block;
+    float: left;
+    width: 300px;
+    height: auto;
+}
+
+.rat-container h1 {
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+    
+    
+    line-height: 1.6;
+    text-decoration: none;
+}
